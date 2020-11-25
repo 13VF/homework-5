@@ -1,0 +1,56 @@
+@import './grid.css';
+@import './gallery.css';
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    top: 0px;
+    background-color: rgb(65, 65, 65);
+    color: rgb(204, 204, 204);
+    padding-left: 50px;
+    font-weight: 300;
+    position: fixed;
+}
+
+nav {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 20px;
+    background-color: rgb(207, 207, 207);
+    color: rgb(112, 112, 112);
+    margin: 80px 300px 0px 50px;
+    padding: 5px;
+    padding-left: 20px;
+    font-style: italic;
+    font-size: small;
+}
+
+section {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 100px;
+    font-weight: 300;
+    font-size: x-large;
+    color: grey;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    background-color: rgb(65, 65, 65);
+    color: rgb(204, 204, 204);
+    font-size: small;
+}

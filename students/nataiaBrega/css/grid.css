@@ -1,0 +1,27 @@
+.grid {
+    display: grid;
+    gap: 30px;
+    padding: 50px;
+    padding-bottom: 100px;
+    background-color: rgb(249, 249, 249);
+    grid-template-areas:
+        "left center center center center center"
+        "left center center center center center";
+    grid-template-columns: auto repeat(5, 1fr);
+    /* grid-template-rows: 1fr 1fr; */
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+}
+
+.left {
+    grid-area: left;
+    background-color: rgb(249, 249, 249);
+}
+
+.grid .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    padding-right: 200px;
+}
+
