@@ -2,16 +2,16 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    height: 220px;
-    width: 220px;
+    height: var(--round-size);
+    width: var(--round-size);
     background-color: tomato;
     display: flex;
 }
 
 .center div {
     display: flex;
-    height: 45px;
-    width: 45px;
+    height: calc(var(--round-size) / 5);
+    width: calc(var(--round-size) / 5);
     border-radius: 0px !important;
 }
 
@@ -39,3 +39,24 @@
     border-radius: 5px;
 }
 
+/* @media (max-width: 850px) {
+    .center {
+        height: 140px;
+        width: 140px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 650px) {
+    .center {
+        height: 160px;
+        width: 160px;
+    }
+}   */
