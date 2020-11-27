@@ -38,25 +38,3 @@
 .grid div {
     border-radius: 5px;
 }
-
-/* @media (max-width: 850px) {
-    .center {
-        height: 140px;
-        width: 140px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 650px) {
-    .center {
-        height: 160px;
-        width: 160px;
-    }
-}   */
