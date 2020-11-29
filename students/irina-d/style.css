@@ -1,0 +1,382 @@
+body {
+	margin: 0;
+}
+
+@font-face {
+	font-family: "GTEestiProDisplay";
+	font-style: normal;
+	font-weight: 700;
+	src: url("https://cdn1.ozone.ru/graphics/fonts/gteestipro/gteestiprodisplay-bold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: 'GTEestiProText';
+	font-weight: 400;
+	font-style: normal;
+	src: url("https://cdn1.ozone.ru/graphics/fonts/gteestipro/gteestiprotext-regular.woff2") format("woff2");
+}
+
+.mainWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/*max-width: 1416px;*/
+	width: 100%;
+	margin: 0 auto;
+	font-family: "GTEestiProText", Arial, sans-serif;
+	color: #001A34;
+	font-size: 16px;
+	line-height: 22px
+}
+
+@media (min-width: 960px) {
+	.mainWrapper {
+		font-size: 18px;
+		line-height: 26px
+	}
+}
+
+h1 {
+	font-family: "GTEestiProDisplay", Arial, sans-serif;
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 700;
+	text-align: left;
+	margin: 0 16px;
+}
+
+@media (min-width: 960px) {
+	h1 {
+		font-size: 24px;
+		line-height: 28px;
+	}
+}
+
+@media (min-width: 1416px) {
+	h1 {
+		font-size: 28px;
+		line-height: 32px;
+		margin: 0 24px 0 80px;
+	}
+}
+
+h2 {
+	font-family: "GTEestiProDisplay", Arial, sans-serif;
+	font-size: 22px;
+	line-height: 30px;
+	font-weight: 700;
+	text-align: left;
+	margin: 0 16px;
+}
+
+.nameCompany {
+	width: 100%;
+	color: #fff;
+	font-family: "GTEestiProDisplay", Arial, sans-serif;
+	font-size: 24px;
+	text-align: left;
+	font-weight: 700;
+	margin-left: 16px;
+}
+
+@media (min-width: 960px) {
+	h2 {
+		text-align: center;
+	}
+
+	.nameCompany {
+		font-size: 28px;
+	}
+}
+
+@media (min-width: 1416px) {
+	h2 {
+		font-size: 24px;
+		line-height: 28px;
+		text-align: left;
+		margin: 0 24px;
+	}
+
+	.nameCompany {
+		font-size: 32px;
+		margin-left: 24px;
+	}
+}
+
+
+.grid {
+	display: grid;
+	grid-gap: 10px;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.grid:last-of-type {
+	margin-bottom: 0;
+}
+
+.gridElementTop {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.gridElement {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.grid--complex {
+	grid-template-areas:
+		"header"
+		"search"
+		"title";
+	grid-template-columns: 100%;
+	grid-template-rows: 40px 40px 150px;
+	grid-gap: 0;
+}
+
+@media (min-width: 960px) {
+	.grid--complex {
+		grid-template-rows: 50px 70px 100px;
+	}
+}
+
+@media (min-width: 1416px) {
+	.grid--complex {
+		grid-template-rows: 50px 70px 150px;
+	}
+}
+
+.gridElement--header {
+	grid-area: header;
+	background: #005cfe;
+}
+
+
+.gridElement--search {
+	grid-area: search;
+	background: #f2f3f5;
+}
+
+.searchDescription {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.gridElement--title {
+	grid-area: title;
+	background: #fff;
+}
+
+.fashionWrapper {
+	background: #f2f3f5;
+	width: 100%;
+}
+
+.fashion {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 35px 16px;
+}
+
+@media (min-width: 960px) {
+	.fashion {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: column;
+		margin: 35px 16px;
+	}
+}
+
+@media (min-width: 1416px) {
+	.fashion {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+		margin: 35px 80px;
+	}
+}
+
+.fashionDescription {
+	width: 100%;
+}
+
+@media (min-width: 960px) {
+	.fashionDescription {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media (min-width: 1416px) {
+	.fashionDescription {
+		max-width: 220px;
+		width: 220px;
+		text-align: left;
+	}
+}
+
+.fashionTitle h2 {
+	margin: 0px;
+}
+
+.fashionText {
+	margin: 15px 0px;
+}
+
+.productItemsWrapper {}
+
+@media only screen and (min-width: 960px) {
+	.productItemsWrapper {
+		display: flex;
+		width: calc(100% - 200px);
+	}
+}
+
+.productItems {
+	grid-template-areas:
+		"item1 item6"
+		"item2 item7"
+		"item3 item8"
+		"item4 item9"
+		"item5 item10";
+	grid-template-columns: repeat(2, 140px);
+	grid-template-rows: repeat(5, 140px);
+	gap: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+	.productItems {
+		grid-template-areas:
+			"item1 item2 item6"
+			"item4 item9 item3"
+			"item7 item8 item5"
+			"item10 . .";
+		grid-template-columns: repeat(3, 140px);
+		grid-template-rows: repeat(4, 140px);
+		gap: 20px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.productItems {
+		grid-template-areas:
+			"item9 item1 item2 item3"
+			"item6 item4 item5 item8"
+			"item7 item10 . .";
+		grid-template-columns: repeat(4, 140px);
+		grid-template-rows: repeat(4, 140px);
+		gap: 20px;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	.productItems {
+		grid-template-areas:
+			"item1 item2 item3 item4 item5"
+			"item6 item7 item8 item9 item10";
+		grid-template-columns: repeat(5, 130px);
+		grid-template-rows: 130px 130px;
+		gap: 20px;
+		justify-content: center;
+	}
+}
+
+@media only screen and (min-width: 1416px) {
+	.productItems {
+		grid-template-areas:
+			"item1 item2 item3 item4 item5"
+			"item6 item7 item8 item9 item10";
+		grid-template-columns: 150px 150px 150px 150px 150px;
+		grid-template-rows: 150px 150px;
+		grid-gap: 20px;
+		justify-content: flex-end;
+	}
+}
+
+@media only screen and (min-width: 1473px) {
+	.productItems {
+		grid-template-areas:
+			"item1 item2 item3 item4 item5"
+			"item6 item7 item8 item9 item10";
+		grid-template-columns: 200px 200px 200px 200px 200px;
+		grid-template-rows: 200px 200px;
+		grid-gap: 40px;
+		justify-content: flex-end;
+	}
+}
+
+.productItem {}
+
+.productItem1 {
+	grid-area: item1;
+}
+
+.productItem2 {
+	grid-area: item2;
+}
+
+.productItem3 {
+	grid-area: item3;
+}
+
+.productItem4 {
+	grid-area: item4;
+}
+
+.productItem5 {
+	grid-area: item5;
+}
+
+.productItem6 {
+	grid-area: item6;
+}
+
+.productItem7 {
+	grid-area: item7;
+}
+
+.productItem8 {
+	grid-area: item8;
+}
+
+.productItem9 {
+	grid-area: item9;
+}
+
+.productItem10 {
+	grid-area: item10;
+}
+
+.itemPhoto {
+	width: 140px;
+	height: 140px;
+}
+
+@media only screen and (min-width: 960px) {
+	.itemPhoto {
+		width: 130px;
+		height: 130px;
+	}
+}
+
+@media only screen and (min-width: 1416px) {
+	.itemPhoto {
+		width: 150px;
+		height: 150px;
+	}
+}
+
+@media only screen and (min-width: 1473px) {
+	.itemPhoto {
+		width: 200px;
+		height: 200px;
+	}
+}
