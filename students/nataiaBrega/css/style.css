@@ -1,0 +1,137 @@
+@import './grid.css';
+@import './gallery.css';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    top: 0px;
+    background-color: rgb(65, 65, 65);
+    color: rgb(204, 204, 204);
+    padding-left: 50px;
+    font-weight: 300;
+    position: fixed;
+}
+
+nav {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 20px;
+    background-color: rgb(207, 207, 207);
+    color: rgb(112, 112, 112);
+    margin: 80px 20% 0px 50px;
+    padding: 5px;
+    padding-left: 20px;
+    font-style: italic;
+    font-size: small;
+}
+
+.topText {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 100px;
+    font-weight: 300;
+    font-size: x-large;
+    color: grey;
+}
+
+.left {
+    padding-right: 20px;
+}
+
+.left h1 {
+    margin: 0px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    background-color: rgb(65, 65, 65);
+    color: rgb(204, 204, 204);
+    font-size: small;
+}
+
+.main{
+    background-color: rgb(249, 249, 249);
+    padding-top: var(--grid-padding);
+}
+
+@media (max-width: 1030px){
+    header {
+        height: 40px;
+    }
+
+    .topText {
+        padding: 60px;
+        font-size: 20px;
+    }
+
+    .left {
+        padding-top: 30px;
+    }
+
+    .main {
+        padding-top: 0px;
+    }
+}
+
+@media (max-width: 750px){
+    header {
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .topText {
+        padding: 50px;
+        font-size: 18px;
+    }
+
+    .left {
+        --grid-padding: 40px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+     p {
+         font-size: 14px;
+     }
+
+     nav {
+         margin-top: 60px;
+     }
+
+     footer {
+        height: 25px;
+        font-size: 10px;
+     }
+}
+
+@media (max-width: 320px){
+    .topText {
+        display: none;
+    }
+
+    nav {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .left {
+        padding-top: 10px;
+        padding-left: 30px;
+    }
+}
