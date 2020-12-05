@@ -1,0 +1,151 @@
+@import "/students/ramielausta/andreiandreev/section.css";
+
+body {
+    height: 100vh;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "search"
+        "h1"
+        "section"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 40px 50px 1fr 50px;
+}
+
+.header {
+    grid-area: header;
+    background-color: #000;
+    color: #fff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.search {
+    grid-area: search;
+    background-color: antiquewhite;
+    color: #000;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainH1 {
+    grid-area: h1;
+    background-color: burlywood;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainWrapper {
+    grid-area: section;
+    background-color: cornsilk;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #000;
+    color: #fff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        height: 100%;
+    
+        display: grid;
+        grid-template-areas: 
+            "header"
+            "search"
+            "h1"
+            "section"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 40px 50px 1fr 50px;
+    }
+    h1 {
+        font-size: 1.1em;
+    }
+    h4 {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        height: 100%;
+    
+        display: grid;
+        grid-template-areas: 
+            "header"
+            "search"
+            "h1"
+            "section"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 40px 50px 1fr 50px;
+    }
+    h1 {
+        font-size: 1.1em;
+    }
+    h4 {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        height: 100%;
+    
+        display: grid;
+        grid-template-areas: 
+            "header"
+            "search"
+            "h1"
+            "section"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 40px 50px 1fr 50px;
+    }
+    h1 {
+        font-size: 1.1em;
+    }
+    h4 {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+}
