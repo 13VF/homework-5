@@ -5,7 +5,7 @@ body {
 .mainWrapper {
     
     width: 100%;
-    min-height: 100vh;
+    min-width: 320px;
     margin: 0;
 }
 
@@ -14,7 +14,7 @@ body {
     width: 100%;
     min-height: 500px;
     margin-bottom: 30px;
-    gap: 50px;
+    gap: 20px;
 }
 
 .grid:last-of-type {
@@ -25,20 +25,17 @@ body {
 
 .grid--main {
     gap: 0;
-    min-height: 100vh;
     grid-template-areas: 
     "header"
     "search"
-    "title"
-    "content";
-    grid-template-columns: 1fr;
-    grid-template-rows: 40px 60px 2fr 7fr; 
+    "title";
+    grid-template-columns: 100%;
+    grid-template-rows: 40px 60px 200px; 
 }
 
 
 .gridElement {
     display: flex;
-    
     align-items: center;
     background-color: white;
 }
@@ -67,12 +64,13 @@ body {
 }
 
 .gridElement--container {
-    grid-area: content;
+    /*grid-area: content;*/
     display: grid;
     grid-template-columns: 2fr repeat(5, 1fr);
     grid-template-rows: 1fr 1fr 50px;
     background-color: rgb(240, 239, 239);
     gap: 30px;
+    
 }
 
 
@@ -109,17 +107,19 @@ body {
     height: 100%;
     grid-column: 2 / span 6;
     grid-row: 1 / span 2;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-template-rows: repeat(2, 1fr);
     gap: 35px 35px;
     margin: 65px 0px 27px 0px;
-  
+    
     
 }
 
 
 .color {
-    
+    display: grid;
+    min-width: 150px;
+    min-height: 150px;
     border-radius: 7px;
     background-color: rgb(180, 223, 206);
 }
@@ -127,6 +127,11 @@ body {
 .button {
     display: flex;
     flex-direction: row-reverse;
+    min-width: 150px;
+    width: 100%;
+    min-height: 150px;
+    border-radius: 7px;
+    
 }
 
 
@@ -188,10 +193,12 @@ body {
             grid-template-columns: 1fr;
             gap: 0;
             
+            
         }
 
         .gridInnerElementColors {
            gap: 20px 4px; 
+           
         }
 
         .button {
