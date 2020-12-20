@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+}
+
+.mainWrapper {
+    
+    width: 100%;
+    min-width: 320px;
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    min-height: 500px;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.grid:last-of-type {
+    margin-bottom: 0;
+}
+
+
+
+.grid--main {
+    gap: 0;
+    grid-template-areas: 
+    "header"
+    "search"
+    "title";
+    grid-template-columns: 100%;
+    grid-template-rows: 40px 60px 200px; 
+}
+
+
+.gridElement {
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.gridElement--header {
+    grid-area: header;
+    background-color:black;
+}
+
+.gridElement--search {
+    display: flex;
+    justify-content: left;
+    grid-area: search;
+    padding: 20px 40px ;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.gridElement--title {
+    display: grid;
+    grid-area: title;
+    padding: 80px 60px;
+    font-size: 30px;
+
+}
+
+.gridElement--container {
+    /*grid-area: content;*/
+    display: grid;
+    grid-template-columns: 2fr repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr 50px;
+    background-color: rgb(240, 239, 239);
+    gap: 30px;
+    
+}
+
+
+
+.gridInnerElementHead {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    padding-top: 8px;
+    grid-column: 1 / span 1;
+    margin-left: 30px;
+    font-size: 30px;
+    
+}
+
+.gridElementText {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 60px;
+    margin-left: 30px;
+    font-size: 20px;
+    
+}
+
+
+.gridInnerElementColors {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-column: 2 / span 6;
+    grid-row: 1 / span 2;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 35px 35px;
+    margin: 65px 0px 27px 0px;
+    
+    
+}
+
+
+.color {
+    display: grid;
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 7px;
+    background-color: rgb(180, 223, 206);
+}
+
+.button {
+    display: flex;
+    flex-direction: row-reverse;
+    min-width: 150px;
+    width: 100%;
+    min-height: 150px;
+    border-radius: 7px;
+    
+}
+
+
+@media (max-width: 850px){
+
+    .gridElement--title {
+        width: auto;
+        font-size: 15px;
+        padding: 40px 20px;
+    }
+
+    .gridInnerElementHead {
+        grid-area: header;
+        font-size: 15px;
+        padding: 0px 20px;
+        margin-left: 0;
+    }
+
+    .gridElementText {
+        grid-area: text;
+        font-size: 15px;
+        width: auto;
+        padding: 0px 10px;
+        margin: 0;
+    }
+
+    .gridInnerElementColors {
+        grid-area: content;
+        gap: 20px 20px;
+        margin: 50px 0 100px 0;
+        
+    }
+
+    .gridElement--container {
+        
+        grid-template-areas: 
+        'header header header header header header'
+        'text text text text text text'
+        'content content content content content content'
+        'content content content content content content';
+    }
+}
+
+@media (max-width: 320px) {
+
+        .gridElement--title{
+            width: auto;
+            font-size: 15px;
+            padding: 5px 15px;
+        }
+
+        .gridElement--container {
+            grid-template-areas: 
+            'header'
+            'text'
+            'content'
+            'content';
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: 1fr;
+            gap: 0;
+            
+            
+        }
+
+        .gridInnerElementColors {
+           gap: 20px 4px; 
+           
+        }
+
+        .button {
+            font-size: 2vw;
+        }
+
+        .gridInnerElementHead {
+          height: 10px;
+            
+        }
+
+        .gridElementText {
+            font-size: 15px;
+            padding: 5px 15px;
+            grid-area: text;
+            width: auto;
+            margin: 10px 0;
+        }
+}
