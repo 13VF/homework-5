@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+}
+
+.header {
+    height: 50px;
+    background-color: black;
+}
+
+.searchBox { 
+    height: 30px;
+    margin: 10px 10px 0 10px;
+    background-color: #efefef;
+}
+
+.trend {
+    margin: 10px;
+    font-size: 25px;
+    margin-left: 30px;
+}
+
+.mainGrid {
+    display: grid;
+    grid-template-areas:
+    "leftSide boxes";
+    grid-template-columns: 500px 1fr;
+    margin: 50px;
+}
+
+.leftSide {
+    grid-area: leftSide;
+    padding-right: 10px;
+    font-size: 25px;
+}
+
+.grid--boxes{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 30px;
+    margin: 30px auto;
+}
+
+.gridElement {
+    width: 200px;
+}
+
+.image {
+    background-color: lightslategrey; 
+    min-height: 162px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.grid--colors {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.color {
+    min-height: 50px;
+}
+
+.clor1 {
+    background-color: burlywood;
+    border-bottom-left-radius: 4px;
+}
+
+.clor2 {
+    background-color: gold;
+}
+
+.clor3 {
+    background-color: black;
+}
+
+.clor4 {
+    background-color: gray;
+}
+
+.clor5 {
+    background-color: lightgreen;
+    border-bottom-right-radius: 4px;
+}
+
+@media (max-width: 810px){
+    .mainGrid {
+        display: grid;
+        grid-template-areas: 
+        "leftSide"
+        "boxes";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin: 50px;
+    }
+
+    .grid--boxes {
+        width: 430px;
+        margin: 30px auto 30px auto;
+    }
+
+    .leftSide {
+        text-align: justify;
+        margin: 0 10px;
+        padding: 0;
+        font-size: 20px;
+    }
+
+    .trend {
+        font-size: 20px;
+    }
+
+    .mainGrid {
+        margin: 0;
+    }
+}
+
+@media (max-width: 540px){
+    .grid--boxes {
+        width: 200px;
+    }
+}
+
+@media (min-width: 1040px){
+    .grid--boxes {
+        width: 430px;
+    }
+}
+
+@media (min-width: 1270px){
+    .grid--boxes {
+        width: 660px;
+    }
+
+    .leftSide {
+        padding-right: 125px;
+    }
+
+    .searchBox { 
+        margin: 22px 200px 0 30px;
+    }
+}
+
+@media (min-width: 1488px){
+    .grid--boxes {
+        width: 890px;
+    }
+}
+
+@media (min-width: 1700px){
+    .grid--boxes {
+        width: 1120px;
+    }
+
+    .trend {
+        margin: 50px;
+        font-size: 25px;
+    }
+}
